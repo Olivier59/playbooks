@@ -1,0 +1,10 @@
+---
+
+- hosts:
+    - all
+  tasks:
+    - name: "Install Python"
+      ansible.builtin.yum:
+        name: python{{ PYTHON_VERSION }}
+        state: present
+      become: yes
